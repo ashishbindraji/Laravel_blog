@@ -50,9 +50,6 @@
             </button>
             <div class="collapse navbar-collapse text-center" id="navbarsExample09">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item @@home">
-                  <a class="nav-link" href="{{ url('/') }}">Home</a>
-                </li>
                 @if(empty($user->id))
                 <li class="nav-item @@contact"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                 <li class="nav-item @@contact"><a class="nav-link" href="{{ route('register') }}">Register</a></li>

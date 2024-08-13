@@ -64,7 +64,7 @@
                         @endforeach
                     </tbody>
                 </table>
-            @else
+                @else
                 <div class="alert alert-danger text-center" role="alert">
                     No Post Found.
                 </div>

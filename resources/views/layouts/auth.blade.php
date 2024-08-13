@@ -58,7 +58,7 @@
                 <div class="sidebar-left" data-simplebar style="height: 100%;">
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
-                        <li class="active"> <a class="sidenav-item-link" href="{{ route('dashboard') }}"> <i class="mdi mdi-briefcase-account-outline"></i> <span class="nav-text">Dashboard</span> </a> </li>
+                        <li class="active"> <a class="sidenav-item-link" href="{{ url('/') }}"> <i class="mdi mdi-briefcase-account-outline"></i> <span class="nav-text">HomePage</span> </a> </li>
                         <li class="section-title"> Apps </li>
                         <li> <a class="sidenav-item-link" href="{{ route('auth.categories') }}"> <i class="fas fa-tasks"></i> <span class="nav-text">Categories</span> </a> </li>
                         <li> <a class="sidenav-item-link" href="{{ route('auth.tags') }}"> <i class="fas fa-tags"></i> <span class="nav-text">Tags</span> </a> </li>
@@ -82,7 +82,7 @@
                     <div class="navbar-right ">
                         <ul class="nav navbar-nav">
                             <!-- Offcanvas -->
-                            <li class="custom-dropdown"> <a class="offcanvas-toggler active custom-dropdown-toggler" data-offcanvas="contact-off" href="javascript:"> <i class="mdi mdi-contacts icon"></i> </a> </li> <button class="dropdown-toggle nav-link" data-toggle="dropdown"> <img src="{{ asset('assets/auth/images/user/user-xs-01.jpg')}}" class="user-image rounded-circle" alt="User Image" /> <span class="d-none d-lg-inline-block">{{ auth()->user()->name }}</span> </button>
+                            <li class="custom-dropdown"> <a class="offcanvas-toggler active custom-dropdown-toggler" data-offcanvas="contact-off" href="javascript:"> <i class="mdi mdi-contacts icon"></i> </a> </li> <button class="dropdown-toggle nav-link" data-toggle="dropdown"> <img src="{{ asset('assets/auth/images/user/user-xs-01.jpg')}}" class="user-image rounded-circle" alt="User Image" /> <span class="d-none d-lg-inline-block">{{ auth()->user() ? auth()->user()->name : '' }}</span> </button>
                             <ul class="dropdown-menu dropdown-menu-right">
                                 <li> <a class="dropdown-link-item" href="user-profile.html"> <i class="mdi mdi-account-outline"></i> <span class="nav-text">My Profile</span></a></li>
                                 <li class="dropdown-footer">
