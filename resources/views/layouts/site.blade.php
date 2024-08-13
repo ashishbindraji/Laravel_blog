@@ -50,7 +50,7 @@
             </button>
             <div class="collapse navbar-collapse text-center" id="navbarsExample09">
               <ul class="navbar-nav ml-auto">
-                @if(empty($user->id))
+                @if(empty(auth()->user()))
                 <li class="nav-item @@contact"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                 <li class="nav-item @@contact"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                 @else
